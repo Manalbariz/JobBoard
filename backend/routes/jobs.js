@@ -1,34 +1,16 @@
-const express = require('express')
-const res = require('express/lib/response')
-const job = require('../models/jobModel')
-const router = express.Router()
+const express = require("express");
+const res = require("express/lib/response");
+const router = express.Router();
+const { createJob, getAllJobs, getSingleJob, deleteJob, updateJob } = require("../controllers/jobController");
 
-router.get('/', (req, res) => {
-    res.json({mssg: 'Get all jobs'})
-})
+router.get("/", getAllJobs);
 
-router.get('/:id', (req, res) => {
-    res.json({mssg: 'singleAd'})
-})
+router.get("/:id", getSingleJob);
 
-router.post('/newAd',async (req, res) => {
-    const {Title, Description, Salary, Contract, Localisation, Booster } = req.body
-    try{
-        const ad = await job.create({Title, Description, Salary, Contract, Localisation, Booster })
-        res.status(200).json(ad)
-    }catch(error){
-        res.status(400).json({error: error.message})
-    }
-    res.json({mssg: 'newAd'})
-})
-router.patch('/:id', (req, res) => {
-    res.json({mssg: 'updtae ad'})
-})
-router.delete('/:id', (req, res) => {
-    res.json({mssg: 'delete ad'})
-})
+router.post("/newAd", createJob);
 
+router.patch("/:id", updateJob);
 
+router.delete("/:id", deleteJob);
 
-
-module.exports = router
+module.exports = router;
