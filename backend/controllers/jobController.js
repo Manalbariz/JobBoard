@@ -26,8 +26,7 @@ const getSingleJob = async (req, res) => {
 
 // create a new job
 const createJob = async (req, res) => {
-  const { Title, Description, Salary, Contract, Localisation, Booster } =
-    req.body;
+  const { Title, Description, Salary, Contract, Localisation, Booster } = req.body;
   try {
     const ad = await job.create({
       Title,
