@@ -1,5 +1,9 @@
 /*google font*/
 
+*{
+  margin: 0;
+  padding: 0;
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
 
 /* layout */
@@ -21,7 +25,7 @@ body {
 header .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 45px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +36,51 @@ header a {
   text-decoration: none;
 }
 .pages {
-  max-width: 1400px;
-  padding: 20px;
-  margin: 0 auto;
+  max-width: 1920px;
+  
 }
+
+.home{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigtitle{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+.intro {
+  margin-bottom: 50px;
+}
+.contactezNousBtt , .commencerBtt {
+	box-shadow: 3px 4px 0px 0px #899599;
+	background-color:transparent;
+	border-radius:15px;
+	border:1px solid #f0f0f0;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.commencerBtt{
+  color:#ffffff;
+  font-size:30px;
+}
+.contactezNousBtt:hover , .commencerBtt:hover {
+	background-color:transparent;
+}
+.contactezNousBtt:active , .commencerBtt:active{
+	position:relative;
+	top:1px;
+}
+

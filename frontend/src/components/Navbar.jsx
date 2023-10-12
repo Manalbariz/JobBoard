@@ -8,6 +8,7 @@ const Navbar = () => {
                 <Link to="/" className="logo">
                     <h1>M&L Jobs</h1>
                 </Link>
+                <button className="contactezNousBtt">Contacter-nous</button>
             </div>
         </header>
     )

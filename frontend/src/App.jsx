@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import Home from "./pages/Home";
 import Jobs from "./pages/Jobs";
 //components import
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 
 function App() {
   return (
