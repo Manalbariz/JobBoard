@@ -4,14 +4,14 @@ import { Helmet } from "react-helmet";
 import Home from "./pages/Home";
 import Jobs from "./pages/Jobs";
 //components import
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 
 function App() {
   return (
     <>
       <div className="App">
         <Helmet>
-          <style>{`body {background-image: linear-gradient(to left, #fdfdfd, #e5e4f3, #cbccea, #afb6e2, #90a0d9, #7a8ac2, #6475ab, #4e6195, #3f486d, #2e3148, #1c1c27, #010101)}`}</style>
+          <style>{`body {background-image: linear-gradient(to top, #fdfdfd, #e5e4f3, #cbccea, #afb6e2, #90a0d9, #7a8ac2, #6475ab, #4e6195, #3f486d, #2e3148, #1c1c27, #010101)}`}</style>
         </Helmet>
         <BrowserRouter>
           <NavBar />
