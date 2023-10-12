@@ -3,7 +3,7 @@ const JobsDetails = ({ job }) => {
   const descriptionLimitee = job.Description.slice(0, limite);
 
   return (
-      <div classNameName="job-details">
+      <div className="job-details">
       {/* <h4>{job.Title}</h4>
             <p><strong>Déscription du post :</strong> {job.Description}</p> */}
       <div className="courses-container">
