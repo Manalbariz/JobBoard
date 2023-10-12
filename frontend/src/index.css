@@ -20,12 +20,11 @@ body {
   font-family: "Poppins";
   color: #fdfdfd;
 }
-
-
 header .container {
-  max-width: 1400px;
+  /* max-width: 1400px; */
   margin: 0 auto;
-  padding: 45px 20px;
+  height: 220px;
+  /* padding: 20px 20px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,13 +36,15 @@ header a {
 }
 .pages {
   max-width: 1920px;
+  /* height: 100px; */
   
 }
 
-.home{
+.BgHome{
   margin: 0;
   padding: 0;
   width: 100%;
+  height: 670px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +54,7 @@ header a {
 .bigtitle{
   text-align: center;
   font-size: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 .intro {
   margin-bottom: 50px;
@@ -65,15 +66,17 @@ header a {
 	border:1px solid #f0f0f0;
 	display:inline-block;
 	cursor:pointer;
-	color:#000000;
+	color:#ffffff;
 	font-family:Arial;
 	font-size:17px;
 	padding:7px 25px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #e1e2ed;
 }
+.contactezNousBtt{
+  margin-right: 40px;
+}
 .commencerBtt{
-  color:#ffffff;
   font-size:30px;
 }
 .contactezNousBtt:hover , .commencerBtt:hover {
@@ -82,5 +85,10 @@ header a {
 .contactezNousBtt:active , .commencerBtt:active{
 	position:relative;
 	top:1px;
+}
+.logoMl{
+  margin-top: 15px;
+  height: 300px;
+  width: 300px;
 }
 
