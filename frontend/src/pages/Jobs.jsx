@@ -2,11 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import JobsDetails from "../components/JobsDetails";
 
-// Importez la composante JobsDetails
-
+// Réccupération des données de la base de données
 const Jobs = () => {
   const [jobs, setJobs] = useState(null);
-
   useEffect(() => {
     axios
       .get("http://localhost:3000/api/jobs")
@@ -18,26 +16,26 @@ const Jobs = () => {
       });
   }, []);
 
-  // Filtrez les emplois insérés il y a moins de 2 heures
+  // Filtrer les emplois insérés il y a moins de 2 heures
   const jobsFiltered =
     jobs &&
     jobs.filter((job) => {
       const twoHoursAgo = new Date();
       twoHoursAgo.setHours(twoHoursAgo.getHours() - 2);
 
-      const jobDate = new Date(job.createdAt); // Assurez-vous que votre objet job a un champ "insertionTime"
+      const jobDate = new Date(job.createdAt);
       return jobDate >= twoHoursAgo;
     });
 
-  // Filtrez les emplois insérés il y a moins de 2 heures
+  // Filtrer les emplois insérés il y a plus de 2 heures
   const jobsFilteredPlus =
     jobs &&
     jobs.filter((job) => {
       const twoHoursAgo = new Date();
       twoHoursAgo.setHours(twoHoursAgo.getHours() - 2);
 
-      const jobDate = new Date(job.createdAt); // Assurez-vous que votre objet job a un champ "createdAt" (ou "insertionTime")
-      return jobDate <= twoHoursAgo; // Inversé la condition
+      const jobDate = new Date(job.createdAt);
+      return jobDate <= twoHoursAgo;
     });
   return (
     <div className="Jobs">
