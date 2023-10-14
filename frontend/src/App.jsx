@@ -3,8 +3,11 @@ import { Helmet } from "react-helmet";
 //pages import
 import Home from "./pages/Home";
 import Jobs from "./pages/Jobs";
+import Ads from "./pages/Ads";
+// import SelectedJob from "./pages/Ads";
 //components import
 import NavBar from "./components/Navbar";
+
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/jobs" element={<Jobs />} />
+              <Route path="/jobs/:jobId" element={<Ads />} />
             </Routes>
           </div>
         </BrowserRouter>
